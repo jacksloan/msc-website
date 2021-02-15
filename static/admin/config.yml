@@ -48,6 +48,18 @@ collections:
                       widget: boolean,
                       default: false,
                     }
+      - label: "Blog"
+        name: "blog"
+        file: "static/_content/posts.json"
+        fields:
+          - { label: Blog Title, name: title, widget: string }
+          - label: Posts
+            name: posts
+            widget: list
+            fields:
+              - { label: Post Title, name: title, widget: string }
+              - { label: Post Slug, name: slug, widget: string }
+              - { label: Post Content, name: content, widget: markdown
 
       - label: "Coaches Page"
         name: "coaches"
