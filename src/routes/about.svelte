@@ -5,13 +5,18 @@
     content: string;
   }
 
-  export async function preload({ params, query }): Promise<AboutPage> {
+  export async function preload({
+    params,
+    query,
+  }): Promise<{ page: AboutPage }> {
     const res = await this.fetch("_content/about.json");
     const json: AboutPage = await res.json();
 
     return {
-      ...json,
-      content: marked(json.content),
+      page: {
+        ...json,
+        content: marked(json.content),
+      },
     };
   }
 </script>

@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
 publish_mode: editorial_workflow # Allows you to save drafts before publishing them
-media_folder: src/node_modules/images # Where media files will be stored in the repo
+media_folder: static/images # Where media files will be stored in the repo
 public_folder: /images # The src attribute uploaded media will begin with
 
 collections:
