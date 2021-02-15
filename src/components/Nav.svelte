@@ -1,29 +1,32 @@
 <script lang="ts">
 	export let segment: string;
+	const pages: [string, string][] = [
+		[undefined, "HOME"],
+		["about", "ABOUT"],
+		["blog", "BLOG"],
+	];
 </script>
+
+<nav class="relative z-50">
+	<ul class="flex flex-row">
+		<li class="a flex-grow">LOGO GOES HERE</li>
+		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
+		     the blog data when we hover over the link or tap it on a touchscreen -->
+		{#each pages as [link, display]}
+			<li>
+				<a
+					rel={segment === "blog" ? "prefetch" : undefined}
+					aria-current={segment === link ? "page" : undefined}
+					href={link || "."}>{display}</a
+				>
+			</li>
+		{/each}
+	</ul>
+</nav>
 
 <style>
 	nav {
-		border-bottom: 1px solid rgba(255,62,0,0.1);
-		font-weight: 300;
-		padding: 0 1em;
-	}
-
-	ul {
-		margin: 0;
-		padding: 0;
-	}
-
-	/* clearfix */
-	ul::after {
-		content: '';
-		display: block;
-		clear: both;
-	}
-
-	li {
-		display: block;
-		float: left;
+		@apply border border-b-2 border-gray-200 shadow-md font-light px-4 py-0;
 	}
 
 	[aria-current] {
@@ -32,29 +35,17 @@
 	}
 
 	[aria-current]::after {
-		position: absolute;
-		content: '';
+		content: "";
 		width: calc(100% - 1em);
-		height: 2px;
-		background-color: rgb(255,62,0);
-		display: block;
 		bottom: -1px;
+		@apply bg-blue-400 block absolute h-1;
+	}
+
+	.a {
+		@apply no-underline px-4 py-4 block font-medium text-lg;
 	}
 
 	a {
-		text-decoration: none;
-		padding: 1em 0.5em;
-		display: block;
+		@apply no-underline px-4 py-4 block font-medium text-lg;
 	}
 </style>
-
-<nav>
-	<ul>
-		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
-		<li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a></li>
-
-		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">blog</a></li>
-	</ul>
-</nav>
