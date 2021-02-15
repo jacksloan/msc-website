@@ -47,3 +47,8 @@
     <ProgramCard {...card} />
   {/each}
 </section>
+
+<div class="w-full my-4">
+  <hr />
+</div>
+
