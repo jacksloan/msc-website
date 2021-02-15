@@ -38,7 +38,7 @@
 <section class="mt-4 mb-12">
   <h1 class="mb-4 font-semibold uppercase">{page.title}</h1>
   <p class="text-lg font-semibold">
-    {page.subtitle}
+    {page.subTitle}
   </p>
 </section>
 
