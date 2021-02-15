@@ -38,6 +38,8 @@
 
 <h1>Great success!</h1>
 
+<div class="w-48 h-48 border-2 rounded-md border-indigo-600 shadow-lg mb-12"></div>
+
 <figure>
 	<img alt="Success Kid" src="images/successkid.jpg">
 	<figcaption>Have fun with Sapper!</figcaption>
