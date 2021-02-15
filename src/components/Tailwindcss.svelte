@@ -7,6 +7,10 @@
     @apply mt-4 mb-12;
   }
 
+  html {
+    overflow-y: scroll;
+  }
+
   .markdown-content h1,
   h2,
   h3,

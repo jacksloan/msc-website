@@ -19,22 +19,20 @@
 
 <Nav {segment} />
 
-<div style="padding-left: calc(100vw - 100%);">
-  {#if show}
-    <main
-      in:fly={{ y: 25, duration: 250, delay: 255, easing: expoInOut }}
-      out:fly={{ y: 75, duration: 250, easing: expoInOut }}
-      class="relative max-w-4xl p-8 m-auto box-border"
-    >
-      <slot />
-    </main>
-  {:else}
-    <main
-      in:fly={{ y: 25, duration: 250, delay: 255, easing: expoInOut }}
-      out:fly={{ y: 75, duration: 250, easing: expoInOut }}
-      class="relative max-w-4xl p-8 m-auto box-border"
-    >
-      <slot />
-    </main>
-  {/if}
-</div>
+{#if show}
+  <main
+    in:fly={{ y: 25, duration: 250, delay: 255, easing: expoInOut }}
+    out:fly={{ y: 75, duration: 250, easing: expoInOut }}
+    class="relative max-w-4xl p-8 m-auto box-border"
+  >
+    <slot />
+  </main>
+{:else}
+  <main
+    in:fly={{ y: 25, duration: 250, delay: 255, easing: expoInOut }}
+    out:fly={{ y: 75, duration: 250, easing: expoInOut }}
+    class="relative max-w-4xl p-8 m-auto box-border"
+  >
+    <slot />
+  </main>
+{/if}
