@@ -14,7 +14,7 @@
 	}
 </script>
 
-<nav class="relative bg-white z-50">
+<nav class="relative bg-white z-50 border border-b-2 border-gray-200 shadow-sm font-light px-4 py-0">
 	<ul class="flex flex-row">
 		<li class="flex-grow flex flex-row items-center cursor-pointer">
 			<div on:click={() => goHome()}>
@@ -29,6 +29,7 @@
 		{#each pages as [link, display]}
 			<li>
 				<a
+					class="no-underline px-4 py-4 block font-medium text-lg"
 					rel={segment === "blog" ? "prefetch" : undefined}
 					aria-current={segment === link ? "page" : undefined}
 					href={link || "."}>{display}</a
@@ -39,10 +40,7 @@
 </nav>
 
 <style>
-	nav {
-		@apply border border-b-2 border-gray-200 shadow-sm font-light px-4 py-0;
-	}
-
+	
 	[aria-current] {
 		position: relative;
 		display: inline-block;
@@ -53,9 +51,5 @@
 		width: calc(100% - 1.95rem);
 		bottom: -1px;
 		@apply bg-blue-400 block absolute h-1;
-	}
-
-	a {
-		@apply no-underline px-4 py-4 block font-medium text-lg;
 	}
 </style>

@@ -26,7 +26,6 @@
 
 <script lang="ts">
   import ProgramCard from "../components/ProgramCard.svelte";
-  import About from "./about.svelte";
 
   export let page: HomePageJson;
 </script>
@@ -51,4 +50,3 @@
 <div class="w-full my-4">
   <hr />
 </div>
-

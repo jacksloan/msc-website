@@ -7,11 +7,16 @@
     @apply mt-4 mb-12;
   }
 
-  .markdown-content h1,h2,h3,h4,h5 {
+  .markdown-content h1,
+  h2,
+  h3,
+  h4,
+  h5 {
     @apply mt-8 mb-4;
   }
 
-  body, main {
+  body,
+  main {
     @apply bg-gray-50;
   }
 
