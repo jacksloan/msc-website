@@ -59,7 +59,7 @@ collections:
             fields:
               - { label: Post Title, name: title, widget: string }
               - { label: Post Slug, name: slug, widget: string }
-              - { label: Post Content, name: content, widget: markdown
+              - { label: Post Content, name: content, widget: markdown }
 
       - label: "Coaches Page"
         name: "coaches"
