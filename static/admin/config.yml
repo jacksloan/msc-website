@@ -20,20 +20,35 @@ collections:
         file: "static/_content/home.json"
         fields:
           - { label: Title, name: title, widget: string }
-          - { label: Content, name: content, widget: markdown }
-          - label: Links
-            name: links
+          - { label: Seo Title, name: seoTitle, widget: string }
+          - { label: Sub Title, name: subTitle, widget: string }
+          - label: Program Cards
+            name: cards
             widget: list
             fields:
               - { label: Title, name: title, widget: string }
-              - { label: Description, name: description, widget: string }
-              - { label: Button Text, name: buttonText, widget: string }
-              - {
-                  label: Button Link,
-                  name: buttonLink,
-                  widget: select,
-                  options: ["highschool", "coaches", "about", "home"],
-                }
+              - { label: Content, name: content, widget: string }
+              - { label: Age Group, name: ageGroup, widget: string }
+              - { label: Date Range, name: date, widget: string }
+              - label: Links
+                name: links
+                widget: list
+                fields:
+                  - { label: Link Text, name: text, widget: string }
+                  - { label: Link To, name: link, widget: string }
+                  - {
+                      label: Open In New Tab,
+                      name: newTab,
+                      widget: boolean,
+                      default: false,
+                    }
+                  - {
+                      label: Link Disabled,
+                      name: disabled,
+                      widget: boolean,
+                      default: false,
+                    }
+
       - label: "Coaches Page"
         name: "coaches"
         file: "static/_content/coaches.json"

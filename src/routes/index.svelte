@@ -2,7 +2,7 @@
   interface HomePageJson {
     title: string;
     seoTitle: string;
-    subtitle: string;
+    subTitle: string;
     cards: Array<{
       date: string;
       ageGroup: string;
@@ -11,74 +11,16 @@
       links: {
         text: string;
         linkTo: string;
-        target?: string;
+        opensNewTab?: boolean;
         disabled?: boolean;
       }[];
     }>;
   }
 
-  export async function preload({
-    params,
-    query,
-  }): Promise<{ page: HomePageJson }> {
-    try {
-      const res = await this.fetch("_content/home.json");
-      const page: HomePageJson = await res.json();
-      return { page };
-    } catch (e) {
-      return {
-        page: {
-          title: "Minneapolis Ski Club",
-          seoTitle: "MSC - Home",
-          subtitle:
-            "Year round nordic ski training programs for junior and youth skiers of all ability",
-          cards: [
-            {
-              title: "Spring 2021",
-              date: "May - Jun",
-              ageGroup: "Junior/Youth",
-              links: [
-                {
-                  linkTo: "https://signmeup.com",
-                  text: "Register",
-                  target: "_blank",
-                },
-                {
-                  linkTo: "about",
-                  text: "Schedule",
-                },
-              ],
-              content: "The spring program schedule for 2021 is now available",
-            },
-            {
-              title: "Summer 2021",
-              date: "June - August",
-              ageGroup: "Junior/Youth",
-              links: [
-                {
-                  linkTo: "https://signmeup.com",
-                  text: "Sign Up",
-                },
-              ],
-              content: "The spring program schedule for 2021 is now available",
-            },
-            {
-              title: "Fall/Winter 2021-2022",
-              date: "September - March",
-              ageGroup: "Junior/Youth",
-              links: [
-                {
-                  linkTo: "https://signmeup.com",
-                  text: "Sign Up",
-                  disabled: true,
-                },
-              ],
-              content: "The spring program schedule for 2021 is now available",
-            },
-          ],
-        },
-      };
-    }
+  export async function preload(): Promise<{ page: HomePageJson }> {
+    const res = await this.fetch("_content/home.json");
+    const page: HomePageJson = await res.json();
+    return { page };
   }
 </script>
 

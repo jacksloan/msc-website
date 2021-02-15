@@ -1,0 +1,49 @@
+{
+  "title": "Minneapolis Ski Club",
+  "seoTitle": "MSC - Home",
+  "subTitle": "Year round nordic ski training programs for junior and youth skiers of all ability",
+  "cards": [
+    {
+      "title": "Spring 2021",
+      "date": "May - Jun",
+      "ageGroup": "Junior/Youth",
+      "links": [
+        {
+          "linkTo": "https://signmeup.com",
+          "text": "Register",
+          "opensNewTab": true
+        },
+        {
+          "linkTo": "about",
+          "text": "Schedule"
+        }
+      ],
+      "content": "The spring program schedule for 2021 is now available"
+    },
+    {
+      "title": "Summer 2021",
+      "date": "June - August",
+      "ageGroup": "Junior/Youth",
+      "links": [
+        {
+          "linkTo": "https://signmeup.com",
+          "text": "Sign Up"
+        }
+      ],
+      "content": "The spring program schedule for 2021 is now available"
+    },
+    {
+      "title": "Fall/Winter 2021-2022",
+      "date": "September - March",
+      "ageGroup": "Junior/Youth",
+      "links": [
+        {
+          "linkTo": "https://signmeup.com",
+          "text": "Sign Up",
+          "disabled": true
+        }
+      ],
+      "content": "The spring program schedule for 2021 is now available"
+    }
+  ]
+}

@@ -6,7 +6,7 @@
   export let links: {
     text: string;
     linkTo: string;
-    target?: string;
+    opensNewTab?: boolean;
     disabled?: boolean;
   }[] = [];
   let hasLinks = links?.length ?? 0 > 0;
