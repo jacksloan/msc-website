@@ -26,9 +26,11 @@
 </script>
 
 <svelte:head>
-  <title>{page.title}</title>
+  <title>MSC - {page.title}</title>
 </svelte:head>
 
-<h1>{page.title}</h1>
+<h1 class="mt-4 mb-8">{page.title}</h1>
 
-{@html page.content}
+<div class="markdown-content">
+  {@html page.content}
+</div>

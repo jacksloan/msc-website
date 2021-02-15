@@ -3,8 +3,12 @@
   @tailwind components;
   @tailwind utilities;
 
-  h1,h2,h3,h4,h5,h6 {
-    @apply my-2;
+  .page-title {
+    @apply mt-4 mb-12;
+  }
+
+  .markdown-content h1,h2,h3,h4,h5 {
+    @apply mt-8 mb-4;
   }
 
   body, main {
@@ -12,23 +16,23 @@
   }
 
   h1 {
-    @apply text-6xl;
-  }
-
-  h2 {
     @apply text-5xl;
   }
 
-  h3 {
+  h2 {
     @apply text-4xl;
   }
-  h4 {
+
+  h3 {
     @apply text-3xl;
   }
-  h5 {
+  h4 {
     @apply text-2xl;
   }
-  h6 {
+  h5 {
     @apply text-xl;
+  }
+  h6 {
+    @apply text-lg;
   }
 </style>

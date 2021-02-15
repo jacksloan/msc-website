@@ -5,14 +5,14 @@
 </script>
 
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>MSC - Home</title>
 </svelte:head>
 
-<h1 class="mt-4 mb-12">Great success!</h1>
+<h1 class="page-title">Minneapolis Ski Club</h1>
 
 <div class="flex flex-col md:flex-row justify-between mb-8">
 	<div class="card bg-white">
-		<h6 class="mb-2">Spring Sessions</h6>
+		<h6 class="mb-2 font-medium">Spring Sessions</h6>
 		<div class="icon-container">
 			<CalendarIcon size="16" />
 			<p class="ml-2">May 1 - June 6</p>
@@ -21,28 +21,32 @@
 			<MapPinIcon size="16" />
 			<p class="ml-2">Theodore Wirth</p>
 		</div>
-		<p class=mt-4>The spring training schedule is now active</p>
+		<p class="mt-4">The spring training schedule is now active</p>
 		<button class="btn btn-blue flex flex-row">
-			<p class="mr-1">Sign up now</p>
+			<p class="mr-1">Sign up</p>
 			<ArrowRightCircleIcon size="24" />
 		</button>
 	</div>
 
-	<div class="card bg-green-200">
-		<h6 class="mb-2">Spring Sessions</h6>
+	<div class="card bg-white">
+		<h6 class="mb-2 font-medium">Summer Sessions</h6>
 		<div class="icon-container">
 			<CalendarIcon size="16" />
-			<p class="ml-2">May 1 - June 6</p>
+			<p class="ml-2">June 6 - August 13</p>
 		</div>
 		<div class="icon-container">
 			<MapPinIcon size="16" />
 			<p class="ml-2">Theodore Wirth</p>
 		</div>
 		<p>The spring training schedule is now active</p>
+		<button class="btn btn-blue flex flex-row">
+			<p class="mr-1">Sign up</p>
+			<ArrowRightCircleIcon size="24" />
+		</button>
 	</div>
 
-	<div class="card bg-yellow-200">
-		<h6 class="mb-2">Fall</h6>
+	<div class="card bg-white">
+		<h6 class="mb-2 font-medium">Fall/Winter</h6>
 		<div class="icon-container">
 			<CalendarIcon size="16" />
 			<p class="ml-2">May 1 - June 6</p>
@@ -51,20 +55,13 @@
 			<MapPinIcon size="16" />
 			<p class="ml-2">Theodore Wirth</p>
 		</div>
-		<p>Check back later</p>
+		<p>Fall and winter registration will be available after the schedule is finalized</p>
+		<button disabled class="btn btn-blue flex flex-row">
+			<p class="mr-1">Sign up</p>
+			<ArrowRightCircleIcon size="24" />
+		</button>
 	</div>
 </div>
-
-<figure>
-	<img alt="Success Kid" src="images/successkid.jpg" />
-	<figcaption>Have fun with Sapper!</figcaption>
-</figure>
-
-<p>
-	<strong
-		>Try editing this file (src/routes/index.svelte) to test live reloading.</strong
-	>
-</p>
 
 <style>
 	.icon-container {
@@ -80,6 +77,6 @@
 	}
 
 	.btn-blue {
-		@apply border-indigo-600 text-indigo-600;
+		@apply border-indigo-600 text-indigo-600 disabled:opacity-50 disabled:cursor-not-allowed;
 	}
 </style>
