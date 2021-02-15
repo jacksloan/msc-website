@@ -1,0 +1,10 @@
+{
+  "title": "Recent Posts",
+  "posts": [
+    {
+      "title": "How to ski",
+      "slug": "how-to-ski",
+      "content": "### All about skiing\n\n* a\n* b\n* c"
+    }
+  ]
+}
