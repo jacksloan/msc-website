@@ -63,5 +63,13 @@
       ],
       "content": "The full fall/winter schedule is not yet abailable"
     }
+  ],
+  "images": [
+    {
+      "image": "/images/classic-example.jpg"
+    },
+    {
+      "image": "/images/msc-skier-1.jpg"
+    }
   ]
 }
