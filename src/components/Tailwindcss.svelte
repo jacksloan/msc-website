@@ -11,6 +11,10 @@
     overflow-y: scroll;
   }
 
+  .markdown-content p {
+    @apply mb-6;
+  }
+
   .markdown-content h1,
   h2,
   h3,

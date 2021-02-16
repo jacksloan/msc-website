@@ -21,7 +21,7 @@
 </script>
 
 <div
-  class="relative shadow-lg hover:shadow-2xl w-full md:w-64 my-4 md:my-0 h-72 rounded-lg p-4 pt-2 transition-shadow duration-300 bg-white {wrapperClasses}"
+  class="relative shadow-lg hover:shadow-2xl w-full md:w-64 my-4 md:my-0 h-72 rounded-lg p-6 pt-4 transition-shadow duration-300 bg-white {wrapperClasses}"
 >
   <h6 class="mb-2 font-medium">{title}</h6>
 
@@ -56,7 +56,7 @@
   <p class="mt-4">{content}</p>
 
   {#if hasLinks}
-    <div class="absolute right-2 bottom-2 flex flex-row gap-2">
+    <div class="absolute right-4 bottom-4 flex flex-row gap-2">
       {#each links as b}
         <a
           disabled={b.disabled}
@@ -86,6 +86,6 @@
   }
 
   .icon-container {
-    @apply my-1 text-gray-400 flex flex-row text-sm items-center;
+    @apply my-1 opacity-60 flex flex-row text-sm items-center;
   }
 </style>

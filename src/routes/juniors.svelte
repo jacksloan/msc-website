@@ -70,6 +70,58 @@
                   location: "Battle Creek",
                   time: "7:00 AM - 9:00 AM",
                 },
+                {
+                  dateRange: "June 1 - April 2",
+                  ageGroup: "Youth/Junior",
+                  day: "Monday AM",
+                  content: "Technique and Distance",
+                  location: "Battle Creek",
+                  time: "7:00 AM - 9:00 AM",
+                },
+                {
+                  dateRange: "June 1 - April 2",
+                  ageGroup: "Youth/Junior",
+                  day: "Monday AM",
+                  content: "Technique and Distance",
+                  location: "Battle Creek",
+                  time: "7:00 AM - 9:00 AM",
+                },
+                {
+                  dateRange: "June 1 - April 2",
+                  ageGroup: "Youth/Junior",
+                  day: "Monday AM",
+                  content: "Technique and Distance",
+                  location: "Battle Creek",
+                  time: "7:00 AM - 9:00 AM",
+                },
+              ],
+            },
+            {
+              tabName: "Fall-Winter",
+              content: marked("### Stuff About Fall And Winter"),
+              activities: [
+                {
+                  dateRange: "June 1 - April 2",
+                  ageGroup: "Youth/Junior",
+                  day: "Monday AM",
+                  content: "Technique and Distance",
+                  location: "Battle Creek",
+                  time: "7:00 AM - 9:00 AM",
+                },
+              ],
+            },
+            {
+              tabName: "Race Program",
+              content: marked("### Advanced Racing Program (Year Round)"),
+              activities: [
+                {
+                  dateRange: "June 1 - April 2",
+                  ageGroup: "Youth/Junior",
+                  day: "Monday AM",
+                  content: "Technique and Distance",
+                  location: "Battle Creek",
+                  time: "7:00 AM - 9:00 AM",
+                },
               ],
             },
           ],
@@ -83,7 +135,6 @@
   import { fly } from "svelte/transition";
   import NavTabs from "../components/NavTabs.svelte";
   import ProgramCard from "../components/ProgramCard.svelte";
-  import MapIcon from "svelte-feather-icons/src/icons/MapPinIcon.svelte";
 
   export let page: JuniorsPage;
 
@@ -132,10 +183,9 @@
   >
     {@html selectedProgramContent.content}
 
-    <div class="flex flex-col md:flex-row">
+    <div class="flex flex-col flex-wrap md:gap-7 md:flex-row">
       {#each selectedProgramContent.activities as activity}
         <ProgramCard
-          wrapperClasses={"w-full md:w-full"}
           location={activity.location}
           title={activity.day}
           ageGroup={activity.ageGroup}
@@ -152,14 +202,18 @@
     out:fly={{ y: 75, duration: 200 }}
   >
     {@html selectedProgramContent.content || ""}
-    {#each selectedProgramContent.activities || [] as activity}
-      <ProgramCard
-        location={activity.location}
-        title={activity.day}
-        ageGroup={activity.ageGroup}
-        date={activity.dateRange}
-        time={activity.time}
-      />
-    {/each}
+
+    <div class="flex flex-col md:flex-row">
+      {#each selectedProgramContent.activities || [] as activity}
+        <ProgramCard
+          location={activity.location}
+          title={activity.day}
+          ageGroup={activity.ageGroup}
+          date={activity.dateRange}
+          time={activity.time}
+          content="Strength, Technique, and Distance"
+        />
+      {/each}
+    </div>
   </div>
 {/if}

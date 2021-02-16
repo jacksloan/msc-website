@@ -41,7 +41,7 @@
   </p>
 </section>
 
-<section class="flex flex-col md:flex-row justify-between mb-8">
+<section class="flex flex-col md:flex-row flex-wrap justify-between mb-8">
   {#each page.cards as card}
     <ProgramCard {...card} />
   {/each}

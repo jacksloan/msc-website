@@ -14,8 +14,8 @@
           "opensNewTab": true
         },
         {
-          "linkTo": "about",
-          "text": "Schedule"
+          "linkTo": "juniors?tab=Spring",
+          "text": "More Info"
         }
       ],
       "content": "The spring program schedule for 2021 is now available"
@@ -27,7 +27,11 @@
       "links": [
         {
           "linkTo": "https://signmeup.com",
-          "text": "Sign Up"
+          "text": "Register"
+        },
+        {
+          "linkTo": "juniors?tab=Summer",
+          "text": "More Info"
         }
       ],
       "content": "The spring program schedule for 2021 is now available"
