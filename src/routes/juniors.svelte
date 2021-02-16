@@ -98,31 +98,13 @@
             },
             {
               tabName: "Fall-Winter",
-              content: marked("### Stuff About Fall And Winter"),
-              activities: [
-                {
-                  dateRange: "June 1 - April 2",
-                  ageGroup: "Youth/Junior",
-                  day: "Monday AM",
-                  content: "Technique and Distance",
-                  location: "Battle Creek",
-                  time: "7:00 AM - 9:00 AM",
-                },
-              ],
+              content: marked("### Fall/Winter 2021-2022 Programming\n\nFollow [MSC on Facebook](https://www.facebook.com) to know when the fall and winter schedule is posted"),
+              activities: [],
             },
             {
               tabName: "Race Program",
               content: marked("### Advanced Racing Program (Year Round)"),
-              activities: [
-                {
-                  dateRange: "June 1 - April 2",
-                  ageGroup: "Youth/Junior",
-                  day: "Monday AM",
-                  content: "Technique and Distance",
-                  location: "Battle Creek",
-                  time: "7:00 AM - 9:00 AM",
-                },
-              ],
+              activities: [],
             },
           ],
         },

@@ -3,6 +3,7 @@
     title: string;
     seoTitle: string;
     subTitle: string;
+    images: any[];
     cards: Array<{
       date: string;
       ageGroup: string;
@@ -26,27 +27,61 @@
 
 <script lang="ts">
   import ProgramCard from "../components/ProgramCard.svelte";
+  import Carousel from "@beyonk/svelte-carousel";
+  import { ChevronLeftIcon, ChevronRightIcon } from "svelte-feather-icons";
 
   export let page: HomePageJson;
+  let hasImages = (page?.images?.length || 0) > 0;
 </script>
 
 <svelte:head>
   <title>{page.seoTitle || "MSC - Home"}</title>
 </svelte:head>
 
-<section class="mt-4 mb-12">
+<section class="mt-4 mb-12 text-center">
   <h1 class="mb-4 font-semibold uppercase">{page.title}</h1>
   <p class="text-lg font-semibold">
     {page.subTitle}
   </p>
-</section>
 
-<section class="flex flex-col md:flex-row flex-wrap justify-between mb-8">
-  {#each page.cards as card}
-    <ProgramCard {...card} />
-  {/each}
+  {#if hasImages}
+    <div class="pt-8">
+      <Carousel perPage={1}>
+        {#each page.images as img}
+          <div>
+            <img
+              class="object-cover h-96 w-full"
+              src="/images/classic-example.jpg"
+              alt="Classic Skier"
+            />
+          </div>
+        {/each}
+        <span class="control" slot="left-control">
+          <ChevronLeftIcon />
+        </span>
+        <span class="control" slot="right-control">
+          <ChevronRightIcon />
+        </span>
+      </Carousel>
+    </div>
+  {/if}
 </section>
 
 <div class="w-full my-4">
   <hr />
 </div>
+
+<section>
+  <h3>Program Options</h3>
+  <div class="flex flex-col md:flex-row flex-wrap justify-between mb-8">
+    {#each page.cards as card}
+      <ProgramCard {...card} />
+    {/each}
+  </div>
+</section>
+
+<style>
+  .control :global(svg) {
+    @apply border-gray-900 border-2 h-full w-full;
+  }
+</style>
