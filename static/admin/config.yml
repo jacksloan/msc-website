@@ -22,6 +22,7 @@ collections:
           - { label: Title, name: title, widget: string }
           - { label: Seo Title, name: seoTitle, widget: string }
           - { label: Sub Title, name: subTitle, widget: string }
+          - { label: Programming Title, name: cardTitle, widget: string }
           - label: "Image Slider"
             name: "images"
             widget: "list"

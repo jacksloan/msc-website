@@ -4,6 +4,7 @@
     seoTitle: string;
     subTitle: string;
     images: any[];
+    cardTitle: string;
     cards: Array<{
       date: string;
       ageGroup: string;
@@ -72,7 +73,7 @@
 </div>
 
 <section>
-  <h3>Program Options</h3>
+  <h3>{page.cardTitle}</h3>
   <div class="flex flex-col md:flex-row flex-wrap justify-between mb-8">
     {#each page.cards as card}
       <ProgramCard {...card} />
