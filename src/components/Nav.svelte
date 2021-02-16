@@ -9,7 +9,7 @@
     [undefined, "HOME"],
     ["juniors", "JUNIORS"],
     ["about", "ABOUT"],
-    ["blog", "BLOG"],
+    // ["blog", "BLOG"],
   ];
 
   function goHome() {

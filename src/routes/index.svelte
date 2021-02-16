@@ -47,12 +47,12 @@
   {#if hasImages}
     <div class="pt-8">
       <Carousel perPage={1}>
-        {#each page.images as img}
+        {#each page.images as { image }, index}
           <div>
             <img
               class="object-cover h-96 w-full"
-              src="/images/classic-example.jpg"
-              alt="Classic Skier"
+              src={image}
+              alt={`carousel image ${index}`}
             />
           </div>
         {/each}
@@ -82,6 +82,6 @@
 
 <style>
   .control :global(svg) {
-    @apply border-gray-900 border-2 h-full w-full;
+    @apply border-white border-2 rounded-full h-full w-full text-white;
   }
 </style>
