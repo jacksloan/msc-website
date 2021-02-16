@@ -21,7 +21,7 @@
 </script>
 
 <div
-  class="relative shadow-lg hover:shadow-2xl w-full md:w-64 my-4 md:my-0 h-72 rounded-lg p-6 pt-4 transition-shadow duration-300 bg-white {wrapperClasses}"
+  class="relative shadow-lg hover:shadow-2xl w-full md:w-64 my-4 md:my-0 rounded-lg p-6 pt-4 pb-20 transition-shadow duration-300 bg-white {wrapperClasses}"
 >
   <h6 class="mb-2 font-medium">{title}</h6>
 
