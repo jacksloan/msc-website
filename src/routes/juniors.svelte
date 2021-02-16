@@ -98,7 +98,11 @@
 
   $: selectedProgramContent = page.programs.find(
     (it) => it.tabName === selectedTab
-  );
+  ) || {
+    tabName: "",
+    activities: [],
+    content: "",
+  };
 
   let show = true;
 
@@ -126,10 +130,10 @@
     in:fly={{ y: 25, delay: 205, duration: 200 }}
     out:fly={{ y: 75, duration: 200 }}
   >
-    {@html selectedProgramContent?.content || ""}
+    {@html selectedProgramContent.content}
 
     <div class="flex flex-col md:flex-row">
-      {#each selectedProgramContent?.activities || [] as activity}
+      {#each selectedProgramContent.activities as activity}
         <ProgramCard
           wrapperClasses={"w-full md:w-full"}
           location={activity.location}
@@ -147,8 +151,8 @@
     in:fly={{ y: 25, delay: 205, duration: 200 }}
     out:fly={{ y: 75, duration: 200 }}
   >
-    {@html selectedProgramContent?.content || ""}
-    {#each selectedProgramContent?.activities || [] as activity}
+    {@html selectedProgramContent.content || ""}
+    {#each selectedProgramContent.activities || [] as activity}
       <ProgramCard
         location={activity.location}
         title={activity.day}
