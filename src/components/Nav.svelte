@@ -7,6 +7,7 @@
   export let segment: string;
   const pages: [string, string][] = [
     [undefined, "HOME"],
+    ["juniors", "JUNIORS"],
     ["about", "ABOUT"],
     ["blog", "BLOG"],
   ];
@@ -81,6 +82,6 @@
     content: "";
     width: calc(100% - 1.95rem);
     bottom: -1px;
-    @apply bg-blue-400 block absolute h-1;
+    @apply bg-indigo-400 block absolute h-1;
   }
 </style>

@@ -3,6 +3,9 @@
   export let ageGroup: string = "";
   export let title: string = "";
   export let content: string = "";
+  export let location: string = "";
+  export let time: string = "";
+  export let wrapperClasses: string = "";
   export let links: {
     text: string;
     linkTo: string;
@@ -13,10 +16,12 @@
   import ArrowRightIcon from "svelte-feather-icons/src/icons/ArrowRightIcon.svelte";
   import CalendarIcon from "svelte-feather-icons/src/icons/CalendarIcon.svelte";
   import UserIcon from "svelte-feather-icons/src/icons/UserIcon.svelte";
+  import MapIcon from "svelte-feather-icons/src/icons/MapIcon.svelte";
+  import ClockIcon from "svelte-feather-icons/src/icons/ClockIcon.svelte";
 </script>
 
 <div
-  class="relative shadow-lg hover:shadow-2xl w-full md:w-64 my-4 md:my-0 h-72 rounded-lg p-4 pt-2 transition-shadow duration-300 bg-white"
+  class="relative shadow-lg hover:shadow-2xl w-full md:w-64 my-4 md:my-0 h-72 rounded-lg p-4 pt-2 transition-shadow duration-300 bg-white {wrapperClasses}"
 >
   <h6 class="mb-2 font-medium">{title}</h6>
 
@@ -34,6 +39,20 @@
     </div>
   {/if}
 
+  {#if location}
+    <div class="icon-container">
+      <MapIcon size="16" />
+      <p class="ml-2">{location}</p>
+    </div>
+  {/if}
+
+  {#if time}
+    <div class="icon-container">
+      <ClockIcon size="16" />
+      <p class="ml-2">{time}</p>
+    </div>
+  {/if}
+
   <p class="mt-4">{content}</p>
 
   {#if hasLinks}
@@ -41,7 +60,7 @@
       {#each links as b}
         <a
           disabled={b.disabled}
-          target={b.target || ""}
+          target={b.opensNewTab ? "_blank" : ""}
           href={b.linkTo}
           class="btn btn-blue flex flex-row gap-1 items-center"
         >
