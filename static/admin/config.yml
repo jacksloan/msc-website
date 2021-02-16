@@ -22,12 +22,16 @@ collections:
           - { label: Title, name: title, widget: string }
           - { label: Seo Title, name: seoTitle, widget: string }
           - { label: Sub Title, name: subTitle, widget: string }
-          - label: "Carousel Image"
+          - label: "Image Slider"
             name: "images"
-            widget: "image"
-            media_library:
-              config:
-                multiple: true
+            widget: "list"
+            fields:
+              - label: "Image"
+                name: "image"
+                widget: "image"
+                media_library:
+                  config:
+                    multiple: true
           - label: Program Cards
             name: cards
             widget: list
