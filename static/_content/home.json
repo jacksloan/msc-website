@@ -5,49 +5,63 @@
   "cards": [
     {
       "title": "Spring 2021",
-      "date": "May - Jun",
+      "date": "April 12 - June 24",
       "ageGroup": "Junior/Youth",
       "links": [
         {
           "linkTo": "https://signmeup.com",
           "text": "Register",
-          "opensNewTab": true
+          "opensNewTab": true,
+          "newTab": true,
+          "link": "https://www.signmeup.com",
+          "disabled": false
         },
         {
           "linkTo": "juniors?tab=Spring",
-          "text": "More Info"
+          "text": "More Info",
+          "link": "juniors?tab=Spring",
+          "newTab": false,
+          "disabled": false
         }
       ],
-      "content": "The spring program schedule for 2021 is now available"
+      "content": "This is a great program for intermediate to advanced level skiers. Intermediate-Advanced would be skiers who need improvements in strength and technique. All sessions include technique, ski drills, and distance in the Spring."
     },
     {
       "title": "Summer 2021",
-      "date": "June - August",
+      "date": "June 14 - August 14",
       "ageGroup": "Junior/Youth",
       "links": [
         {
           "linkTo": "https://signmeup.com",
-          "text": "Register"
+          "text": "Register",
+          "link": "https://www.signmeup.com",
+          "newTab": false,
+          "disabled": false
         },
         {
           "linkTo": "juniors?tab=Summer",
-          "text": "More Info"
+          "text": "More Info",
+          "link": "juniors?tab=Summer",
+          "newTab": false,
+          "disabled": false
         }
       ],
-      "content": "The spring program schedule for 2021 is now available"
+      "content": "The 9 week summer program will begin June 14th and end on August 14th. Most sessions will include technique and distance. Wednesday sessions will focus more on intervals and speed"
     },
     {
       "title": "Fall/Winter 2021-2022",
-      "date": "September - March",
+      "date": "TBA",
       "ageGroup": "Junior/Youth",
       "links": [
         {
           "linkTo": "https://signmeup.com",
           "text": "Sign Up",
-          "disabled": true
+          "disabled": true,
+          "link": "https://www.signmeup.com",
+          "newTab": false
         }
       ],
-      "content": "The spring program schedule for 2021 is now available"
+      "content": "The full fall/winter schedule is not yet abailable"
     }
   ]
 }
