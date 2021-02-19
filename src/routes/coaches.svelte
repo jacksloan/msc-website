@@ -27,7 +27,7 @@
         coaches: json.coaches.map((c) => {
           return {
             ...c,
-            bio: marked(c.bio),
+            bio: c.bio ? marked(c.bio) : c.bio,
           };
         }),
       },
