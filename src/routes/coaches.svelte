@@ -3,13 +3,14 @@
 
   interface CoachBio {
     name: string;
-    photo: string;
-    bio: string;
+    photo?: string;
+    bio?: string;
   }
 
   interface CoachesPage {
     title: string;
     intro?: string;
+    fallBackImage: string;
     coaches: CoachBio[];
   }
 
@@ -60,7 +61,7 @@
         <div class="w-full md:w-40 h-40 rounded-full  overflow-hidden">
           <img
             class="w-40 h-40 rounded-full mx-auto transform transition-transform duration-300 hover:scale-110"
-            src={coach.photo}
+            src={coach.photo || page.fallBackImage}
             alt={coach.name}
           />
         </div>
@@ -68,7 +69,7 @@
           <div class="group-hover:underline text-blue-400">
             {coach.name}
           </div>
-          <div class="text-gray-500">Head Coach</div>
+          <!-- <div class="text-gray-500">Head Coach</div> -->
         </figcaption>
       </figure>
     </div>
@@ -80,9 +81,10 @@
     <figure class="text-center">
       <img
         class="mx-auto w-64 h-64 rounded-full"
-        src={currentCoach.photo}
+        src={currentCoach.photo || page.fallBackImage}
         alt={currentCoach.name}
       />
+
       <figcaption>
         <h3 class="text-blue-400 mt-2">{currentCoach.name}</h3>
       </figcaption>

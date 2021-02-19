@@ -1,5 +1,6 @@
 {
   "title": "Coaches",
+  "fallBackImage": "/images/coach-fallback.png",
   "coaches": [
     {
       "name": "Kevin Brochman",
