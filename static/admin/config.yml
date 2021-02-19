@@ -21,7 +21,12 @@ collections:
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Seo Title, name: seoTitle, widget: string }
-          - { label: Sub Title, name: subTitle, widget: string }
+          - {
+              label: Sub Title,
+              name: subTitle,
+              widget: string,
+              required: false,
+            }
           - { label: Programming Title, name: cardTitle, widget: string }
           - label: "Image Slider"
             name: "images"
@@ -102,7 +107,7 @@ collections:
                   widget: string,
                   required: false,
                 }
-              - { label: Bio, name: bio, widget: markdown }
+              - { label: Bio, name: bio, widget: markdown, required: false }
               - { label: Photo, name: photo, widget: image, required: false }
       - label: "High School Program Page"
         name: "highschool"

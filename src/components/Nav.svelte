@@ -8,6 +8,7 @@
   const pages: [string, string][] = [
     [undefined, "HOME"],
     ["juniors", "JUNIORS"],
+    ["coaches", "COACHES"],
     ["about", "ABOUT"],
     // ["blog", "BLOG"],
   ];

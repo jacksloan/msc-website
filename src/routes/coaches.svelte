@@ -35,7 +35,15 @@
 </script>
 
 <script lang="ts">
+  import Modal from "../components/Modal.svelte";
   export let page: CoachesPage;
+  let showModal: boolean = false;
+  let currentCoach: CoachBio;
+
+  function viewCoachModal(coach: CoachBio) {
+    showModal = true;
+    currentCoach = coach;
+  }
 </script>
 
 <h1 class="page-title">
@@ -45,9 +53,9 @@
   {@html page.intro}
 {/if}
 
-<div class="flex flex-col md:flex-row md:flex-wrap">
+<div class="flex flex-col gap-7 gap-y-24 md:flex-row md:flex-wrap">
   {#each page.coaches as coach}
-    <div class="w-full md:w-40 h-40">
+    <div class="w-full md:w-40 h-40" on:click={() => viewCoachModal(coach)}>
       <figure class="group hover:cursor-pointer relative text-center">
         <div class="w-full md:w-40 h-40 rounded-full  overflow-hidden">
           <img
@@ -66,3 +74,24 @@
     </div>
   {/each}
 </div>
+
+{#if showModal}
+  <Modal on:close={() => (showModal = false)}>
+    <figure class="text-center">
+      <img
+        class="mx-auto w-64 h-64 rounded-full"
+        src={currentCoach.photo}
+        alt={currentCoach.name}
+      />
+      <figcaption>
+        <h3 class="text-blue-400 mt-2">{currentCoach.name}</h3>
+      </figcaption>
+    </figure>
+    <hr />
+    <div>
+      {#if currentCoach.bio}
+        {@html currentCoach.bio}
+      {/if}
+    </div>
+  </Modal>
+{/if}
