@@ -51,7 +51,7 @@ collections:
                 widget: list
                 fields:
                   - { label: Link Text, name: text, widget: string }
-                  - { label: Link To, name: link, widget: string }
+                  - { label: Link To, name: linkTo, widget: string }
                   - {
                       label: Open In New Tab,
                       name: newTab,

@@ -40,10 +40,9 @@
       "ageGroup": "Junior/Youth",
       "links": [
         {
-          "linkTo": "https://signmeup.com",
+          "linkTo": "juniors?tab=Fall",
           "text": "More Info",
           "disabled": false,
-          "link": "juniors?tab=Fall",
           "newTab": false
         }
       ],
@@ -52,10 +51,10 @@
   ],
   "images": [
     {
-      "image": "/images/rollerski-3.png"
+      "image": "/images/rollerski-2.jpg"
     },
     {
-      "image": "/images/rollerski-2.jpg"
+      "image": "/images/rollerski-3.png"
     },
     {
       "image": "/images/rollerski-1.jpg"
