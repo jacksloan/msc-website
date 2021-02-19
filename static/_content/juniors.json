@@ -1,0 +1,31 @@
+{
+  "title": "MSC Youth and Junior Programs",
+  "seoTitle": "Juniors",
+  "content": "",
+  "programs": [
+    {
+      "tabName": "Spring",
+      "content": "### Spring Stuff Goes Here",
+      "airtableLink": "https://airtable.com/embed/shrtywonVVn8f0TpY?backgroundColor=cyan&layout=card&viewControls=on"
+    },
+    {
+      "tabName": "Summer",
+      "content": "### Summer Stuff Goes Here",
+      "airtableLink": "https://airtable.com/embed/shr0bWXzlAy5ASCUv?backgroundColor=cyan&layout=card&viewControls=on"
+    },
+    {
+      "tabName": "Fall",
+      "content": "### Fall 2021 Programming",
+      "airtableLink": "https://airtable.com/embed/shrhmBGMbedy8W0zb?backgroundColor=cyan&layout=card&viewControls=on"
+    },
+    {
+      "tabName": "Winter",
+      "content": "### Advanced Racing Program (Year Round)",
+      "airtableLink": "https://airtable.com/embed/shrPNhrx8UGAm6540?backgroundColor=cyan&layout=card&viewControls=on"
+    },
+    {
+      "tabName": "Race Program",
+      "content": "### Advanced Racing Program (Year Round)"
+    }
+  ]
+}

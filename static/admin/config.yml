@@ -71,7 +71,20 @@ collections:
               - { label: Post Title, name: title, widget: string }
               - { label: Post Slug, name: slug, widget: string }
               - { label: Post Content, name: content, widget: markdown }
-
+      - label: "Juniors"
+        name: "juniors"
+        file: "static/_content/juniors.json"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: SEO Title, name: seoTitle, widget: string }
+          - { label: Main Content, name: content, widget: string }
+          - label: Programs,
+            name: programs,
+            widget: list,
+            fields:
+              - { label: "Program Name", name: "tabName", widget: string }
+              - { label: "Program Content", name: "content", widget: markdown }
+              - { label: "Airtable Link", name: "airtableLink", widget: string }
       - label: "Coaches Page"
         name: "coaches"
         file: "static/_content/coaches.json"
