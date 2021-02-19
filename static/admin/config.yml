@@ -78,9 +78,9 @@ collections:
           - { label: Title, name: title, widget: string }
           - { label: SEO Title, name: seoTitle, widget: string }
           - { label: Main Content, name: content, widget: string }
-          - label: Programs,
-            name: programs,
-            widget: list,
+          - label: Programs
+            name: programs
+            widget: list
             fields:
               - { label: "Program Name", name: "tabName", widget: string }
               - { label: "Program Content", name: "content", widget: markdown }
