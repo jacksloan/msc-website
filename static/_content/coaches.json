@@ -1,0 +1,10 @@
+{
+  "title": "Coaches",
+  "coaches": [
+    {
+      "name": "Kevin Brochman",
+      "bio": "Add stuff about Kevin",
+      "photo": "/images/msc-skier-1.jpg"
+    }
+  ]
+}
