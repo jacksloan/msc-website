@@ -90,6 +90,20 @@ collections:
               - { label: "Program Name", name: "tabName", widget: string }
               - { label: "Program Content", name: "content", widget: markdown }
               - { label: "Airtable Link", name: "airtableLink", widget: string }
+      - label: "Adults"
+        name: "adults"
+        file: "static/_content/adults.json"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: SEO Title, name: seoTitle, widget: string }
+          - { label: Main Content, name: content, widget: string, required: false }
+          - label: Programs
+            name: programs
+            widget: list
+            fields:
+              - { label: "Program Name", name: "tabName", widget: string }
+              - { label: "Program Content", name: "content", widget: markdown }
+              - { label: "Airtable Link", name: "airtableLink", widget: string }
       - label: "Coaches Page"
         name: "coaches"
         file: "static/_content/coaches.json"

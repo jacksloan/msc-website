@@ -1,15 +1,13 @@
 <script context="module" lang="ts">
   import marked from "marked";
 
-  type programCategory = "Spring" | "Summer" | "Fall-Winter" | "Race Program";
-
   interface ProgramContent {
     tabName: string;
     content: string;
     airtableLink?: string;
   }
 
-  interface JuniorsPage {
+  interface AdultsPage {
     title: string;
     seoTitle: string;
     content: string;
@@ -19,9 +17,9 @@
   export async function preload({
     params,
     query,
-  }): Promise<{ page: JuniorsPage }> {
-    const res = await this.fetch("_content/juniors.json");
-    const json: JuniorsPage = await res.json();
+  }): Promise<{ page: AdultsPage }> {
+    const res = await this.fetch("_content/adults.json");
+    const json: AdultsPage = await res.json();
     return {
       page: {
         ...json,
@@ -36,10 +34,9 @@
 </script>
 
 <script lang="ts">
-  import { fly } from "svelte/transition";
   import NavTabs from "../components/NavTabs.svelte";
 
-  export let page: JuniorsPage;
+  export let page: AdultsPage;
 
   let tabs = {
     tabs: page.programs.map((p) => p.tabName),

@@ -1,0 +1,17 @@
+{
+  "title": "MSC Adult Training Programs",
+  "seoTitle": "Adults",
+  "content": "",
+  "programs": [
+    {
+      "tabName": "Fall",
+      "content": "### Fall 2021 Training",
+      "airtableLink": "https://airtable.com/embed/shrH1FgJAdXTLyDHE?backgroundColor=cyan&layout=card&viewControls=on"
+    },
+    {
+      "tabName": "Winter",
+      "content": "### Winter 2021-2022 Training",
+      "airtableLink": "https://airtable.com/embed/shrx4bME4crDfRwan?backgroundColor=cyan&layout=card&viewControls=on"
+    }
+  ]
+}
