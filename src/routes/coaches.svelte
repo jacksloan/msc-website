@@ -3,6 +3,7 @@
 
   interface CoachBio {
     name: string;
+    position?: string;
     photo?: string;
     bio?: string;
   }
@@ -56,11 +57,11 @@
 
 <div class="flex flex-col gap-7 gap-y-24 md:flex-row md:flex-wrap">
   {#each page.coaches as coach}
-    <div class="w-full md:w-40 h-40" on:click={() => viewCoachModal(coach)}>
+    <button aria-label={coach.name + ' Bio'} class="w-full md:w-40 h-40" on:click={() => viewCoachModal(coach)}>
       <figure class="group hover:cursor-pointer relative text-center">
-        <div class="w-full md:w-40 h-40 rounded-full  overflow-hidden">
+        <div class="w-40 h-40 rounded-full mx-auto overflow-hidden">
           <img
-            class="w-40 h-40 rounded-full mx-auto transform transition-transform duration-300 hover:scale-110"
+            class="w-40 h-40 rounded-full transform transition-transform duration-300 hover:scale-110"
             src={coach.photo || page.fallBackImage}
             alt={coach.name}
           />
@@ -69,10 +70,12 @@
           <div class="group-hover:underline text-blue-400">
             {coach.name}
           </div>
-          <!-- <div class="text-gray-500">Head Coach</div> -->
+          {#if coach.position}
+            <div class="text-gray-500">{coach.position}</div>
+          {/if}
         </figcaption>
       </figure>
-    </div>
+    </button>
   {/each}
 </div>
 

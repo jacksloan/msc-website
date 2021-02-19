@@ -7,11 +7,12 @@
   const dispatch = createEventDispatcher();
   const close = () => dispatch("close");
   let modal;
-  const handle_keydown = (e) => {
+  const handleKeydown = (e) => {
     if (e.key === "Escape") {
       close();
       return;
     }
+    // when modal is open, only tab between elements belonging to this modal
     if (e.key === "Tab") {
       // trap focus
       const nodes = modal.querySelectorAll("*");
@@ -24,65 +25,35 @@
       e.preventDefault();
     }
   };
-  const previously_focused =
+
+  // focus previous focus on modal close
+  const hasPreviousFocus =
     typeof document !== "undefined" && document.activeElement;
-  if (previously_focused) {
+  if (hasPreviousFocus) {
     onDestroy(() => {
-      previously_focused.focus();
+      hasPreviousFocus.focus();
     });
   }
 </script>
 
 <!-- see https://github.com/sveltejs/svelte/blob/master/site/content/examples/15-composition/04-modal/Modal.svelte -->
-<svelte:window on:keydown={handle_keydown} />
+<svelte:window on:keydown={handleKeydown} />
 
 <div
   transition:fly={{ y: 200, duration: 200, easing: expoInOut }}
-  class="modal"
+  class="fixed left-0 top-0 w-screen h-screen z-50 overflow-auto bg-white"
   role="dialog"
   aria-modal="true"
   bind:this={modal}
 >
-  <div class="modal-close text-black" on:click={close}>
-    <Close size="48" />
-  </div>
-  <div class="modal-inner-content">
+  <div class="max-w-3xl my-6 mx-auto p-4 md:p-0 relative">
+    <button
+      aria-label="close"
+      class="absolute p-4 md:p-8 -mt-8 md:-mt-6 left-0 top-0 flex flex-row content-center justify-center text-black hover:cursor-pointer hover:bg-gray-300"
+      on:click={close}
+    >
+      <Close size="48" />
+    </button>
     <slot />
   </div>
 </div>
-
-<!-- see https://github.com/sveltejs/svelte/blob/master/site/content/examples/15-composition/04-modal/Modal.svelte -->
-<style>
-  .modal {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 9999;
-    overflow: auto;
-    background: white;
-  }
-
-  .modal-close {
-    position: absolute;
-    width: 6em;
-    height: 6em;
-    right: 0;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 125ms;
-  }
-
-  .modal-close:hover {
-    cursor: pointer;
-    background-color: #eaeaea;
-  }
-
-  .modal-inner-content {
-    max-width: 780px;
-    margin: 6em auto 0;
-  }
-</style>
