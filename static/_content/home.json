@@ -1,7 +1,7 @@
 {
   "title": "Minneapolis Ski Club",
   "seoTitle": "MSC - Home",
-  "subTitle": "",
+  "subTitle": "Year-round nordic ski training programs for skiers of all age and ability",
   "cardTitle": "2021-2022 Programming",
   "cards": [
     {
@@ -9,14 +9,6 @@
       "date": "April 12 - June 24",
       "ageGroup": "Junior/Youth",
       "links": [
-        {
-          "linkTo": "https://signmeup.com",
-          "text": "Register",
-          "opensNewTab": true,
-          "newTab": true,
-          "link": "https://www.signmeup.com",
-          "disabled": false
-        },
         {
           "linkTo": "juniors?tab=Spring",
           "text": "More Info",
@@ -32,13 +24,6 @@
       "date": "June 14 - August 14",
       "ageGroup": "Junior/Youth",
       "links": [
-        {
-          "linkTo": "https://signmeup.com",
-          "text": "Register",
-          "link": "https://www.signmeup.com",
-          "newTab": false,
-          "disabled": false
-        },
         {
           "linkTo": "juniors?tab=Summer",
           "text": "More Info",
@@ -56,21 +41,24 @@
       "links": [
         {
           "linkTo": "https://signmeup.com",
-          "text": "Sign Up",
-          "disabled": true,
-          "link": "https://www.signmeup.com",
+          "text": "More Info",
+          "disabled": false,
+          "link": "juniors?tab=Fall",
           "newTab": false
         }
       ],
-      "content": "The full fall/winter schedule is not yet abailable"
+      "content": "The full fall/winter schedule is only partially available. Subject to changes."
     }
   ],
   "images": [
     {
-      "image": "/images/classic-example.jpg"
+      "image": "/images/rollerski-3.png"
     },
     {
-      "image": "/images/msc-skier-1.jpg"
+      "image": "/images/rollerski-2.jpg"
+    },
+    {
+      "image": "/images/rollerski-1.jpg"
     }
   ]
 }
