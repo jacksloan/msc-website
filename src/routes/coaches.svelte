@@ -48,6 +48,10 @@
   }
 </script>
 
+<svelte:head>
+  <title>MSC - {page.title}</title>
+</svelte:head>
+
 <h1 class="page-title">
   {page.title}
 </h1>
