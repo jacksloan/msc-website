@@ -2,9 +2,9 @@
   "title": "Recent Posts",
   "posts": [
     {
-      "title": "How to ski",
-      "slug": "how-to-ski",
-      "content": "### All about skiing\n\n* a\n* b\n* c"
+      "title": "Sample Post",
+      "slug": "sample-slug",
+      "content": "Sample post text\n\n![](/images/rollerski-3-min.png)"
     }
   ]
 }
