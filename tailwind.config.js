@@ -1,18 +1,18 @@
 module.exports = {
-  // purge: [
-  //   './src/**/*.svelte',
-  //   './src/**/*.svelte',
-  // ],
-  // purge: {
-  //   mode: 'all',
-  //   content: ['./src/**/*.html', './src/**/*.svelte'],
 
-  //   options: {
-  //     whitelistPatterns: [/svelte-/],
-  //     defaultExtractor: (content) =>
-  //       [...content.matchAll(/(?:class:)*([\w\d-/:%.]+)/gm)].map(([_match, group, ..._rest]) => group),
-  //   },
-  // },
+  purge: {
+    enabled: true,
+    content: ['./src/**/*.svelte', './src/**/*.html'],
+    options: {
+      keyframes: true,
+      // considers dynamic class bindings when purging unused classes
+      // credit: https://github.com/matebek https://dev.to/matebek
+      defaultExtractor: (content) => [
+        ...(content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || []),
+        ...(content.match(/(?<=class:)[^=>\/\s]*/g) || []),
+      ],
+    },
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},

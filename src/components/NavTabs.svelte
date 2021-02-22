@@ -28,7 +28,7 @@
 </script>
 
 <ul
-  class="bg-white flex flex-col md:flex-row items-center flex-wrap border-2 border-indigo-400 rounded-md shadow-md"
+  class="bg-white flex flex-col md:flex-row items-center border-2 border-indigo-400 rounded-md shadow-md"
 >
   {#each tabs as tab, index}
     <li class="w-full md:w-1/{tabs.length} text-center flex flex-col">
