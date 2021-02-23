@@ -1,7 +1,7 @@
 module.exports = {
 
   purge: {
-    enabled: true,
+    enabled: process.env.NODE_END === 'PROD',
     content: ['./src/**/*.svelte', './src/**/*.html'],
     options: {
       keyframes: true,

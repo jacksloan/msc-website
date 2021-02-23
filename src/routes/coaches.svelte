@@ -59,17 +59,20 @@
   {@html page.intro}
 {/if}
 
-<div class="flex flex-col gap-7 gap-y-24 md:flex-row md:flex-wrap">
+<div class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-7 gap-y-24">
   {#each page.coaches as coach}
-    <button aria-label={coach.name + ' Bio'} class="w-full md:w-40 h-40" on:click={() => viewCoachModal(coach)}>
-      <figure class="group hover:cursor-pointer relative text-center">
-        <div class="w-40 h-40 rounded-full mx-auto overflow-hidden">
-          <img
-            class="w-40 h-40 rounded-full transform transition-transform duration-300 hover:scale-110"
-            src={coach.photo || page.fallBackImage}
-            alt={coach.name}
-          />
-        </div>
+    <button
+      aria-label={coach.name + " Bio"}
+      class="w-full md:w-40 h-40"
+      on:click={() => viewCoachModal(coach)}
+    >
+      <figure class="group hover:cursor-pointer relative text-center flex flex-col items-center">
+        <img
+          class="w-40 h-40 rounded-full transform transition-transform duration-300 hover:scale-110"
+          src={coach.photo || page.fallBackImage}
+          alt={coach.name}
+        />
+
         <figcaption class="font-medium mt-2">
           <div class="group-hover:underline text-blue-400">
             {coach.name}
