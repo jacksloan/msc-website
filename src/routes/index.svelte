@@ -37,6 +37,7 @@
 
 <svelte:head>
   <title>{page.seoTitle || "MSC - Home"}</title>
+  <meta name="description" content="{'MSC - ' + page.seoTitle}"/>
 </svelte:head>
 
 <section class="mt-4 mb-12 text-center">
@@ -73,7 +74,7 @@
 </div>
 
 <section>
-  <h3>{page.cardTitle}</h3>
+  <h2 class="text-3xl font-medium">{page.cardTitle}</h2>
   <div class="flex flex-col md:flex-row flex-wrap justify-between mb-8">
     {#each page.cards as card}
       <ProgramCard {...card} />

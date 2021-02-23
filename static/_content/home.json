@@ -11,7 +11,7 @@
       "links": [
         {
           "linkTo": "juniors?tab=Spring",
-          "text": "More Info",
+          "text": "More Spring Info",
           "link": "juniors?tab=Spring",
           "newTab": false,
           "disabled": false
@@ -26,7 +26,7 @@
       "links": [
         {
           "linkTo": "juniors?tab=Summer",
-          "text": "More Info",
+          "text": "More Summer Info",
           "link": "juniors?tab=Summer",
           "newTab": false,
           "disabled": false
@@ -41,7 +41,7 @@
       "links": [
         {
           "linkTo": "juniors?tab=Fall",
-          "text": "More Info",
+          "text": "More Fall Info",
           "disabled": false,
           "newTab": false
         }

@@ -27,6 +27,7 @@
 
 <svelte:head>
   <title>MSC - {page.title}</title>
+  <meta name="description" content="{'MSC - ' + page.title}"/>
 </svelte:head>
 
 <h1 class="mt-4 mb-8">{page.title}</h1>

@@ -50,6 +50,7 @@
 
 <svelte:head>
   <title>MSC - {page.title}</title>
+  <meta name="description" content="{'MSC - ' + page.title}"/>
 </svelte:head>
 
 <h1 class="page-title">
