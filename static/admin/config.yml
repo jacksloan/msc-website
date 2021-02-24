@@ -88,8 +88,8 @@ collections:
             widget: list
             fields:
               - { label: "Program Name", name: "tabName", widget: string }
-              - { label: "Program Content", name: "content", widget: markdown }
-              - { label: "Airtable Link", name: "airtableLink", widget: string }
+              - { label: "Program Content", name: "content", widget: markdown, required: false }
+              - { label: "Airtable Link", name: "airtableLink", widget: string, required: false }
       - label: "Adults"
         name: "adults"
         file: "static/_content/adults.json"
