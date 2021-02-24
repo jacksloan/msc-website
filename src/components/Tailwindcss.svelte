@@ -7,6 +7,10 @@
     @apply mt-4 mb-12;
   }
 
+  .signmeup-link {
+    @apply inline-block my-2 border-2 border-indigo-600 text-indigo-600 px-4 py-2 disabled:opacity-75;
+  }
+
   html {
     overflow-y: scroll;
   }
