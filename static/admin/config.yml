@@ -15,6 +15,14 @@ collections:
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Content, name: content, widget: markdown }
+      - label: "Contact Page"
+        name: "contact"
+        file: "static/_content/contact.json"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Contact First Name, name: firstName, widget: string }
+          - { label: Contact Last Name, name: lastName, widget: string }
+          - { label: Facebook Link, name: facebookLink, widget: string }
       - label: "Home Page"
         name: "home"
         file: "static/_content/home.json"
@@ -82,21 +90,41 @@ collections:
         fields:
           - { label: Title, name: title, widget: string }
           - { label: SEO Title, name: seoTitle, widget: string }
-          - { label: Main Content, name: content, widget: string, required: false }
+          - {
+              label: Main Content,
+              name: content,
+              widget: string,
+              required: false,
+            }
           - label: Programs
             name: programs
             widget: list
             fields:
               - { label: "Program Name", name: "tabName", widget: string }
-              - { label: "Program Content", name: "content", widget: markdown, required: false }
-              - { label: "Airtable Link", name: "airtableLink", widget: string, required: false }
+              - {
+                  label: "Program Content",
+                  name: "content",
+                  widget: markdown,
+                  required: false,
+                }
+              - {
+                  label: "Airtable Link",
+                  name: "airtableLink",
+                  widget: string,
+                  required: false,
+                }
       - label: "Adults"
         name: "adults"
         file: "static/_content/adults.json"
         fields:
           - { label: Title, name: title, widget: string }
           - { label: SEO Title, name: seoTitle, widget: string }
-          - { label: Main Content, name: content, widget: string, required: false }
+          - {
+              label: Main Content,
+              name: content,
+              widget: string,
+              required: false,
+            }
           - label: Programs
             name: programs
             widget: list

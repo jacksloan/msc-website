@@ -11,7 +11,7 @@
     ["adults", "ADULTS"],
     ["coaches", "COACHES"],
     ["about", "ABOUT"],
-    // ["blog", "BLOG"],
+    ["contact", "CONTACT"],
   ];
 
   function goHome() {
