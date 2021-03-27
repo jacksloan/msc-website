@@ -20,8 +20,12 @@ collections:
         file: "static/_content/contact.json"
         fields:
           - { label: Title, name: title, widget: string }
-          - { label: Contact First Name, name: firstName, widget: string }
-          - { label: Contact Last Name, name: lastName, widget: string }
+          - {
+              label: Contact First Name,
+              name: contactFirstName,
+              widget: string,
+            }
+          - { label: Contact Last Name, name: contactLastName, widget: string }
           - { label: Facebook Link, name: facebookLink, widget: string }
       - label: "Home Page"
         name: "home"
