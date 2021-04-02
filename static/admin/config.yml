@@ -26,6 +26,18 @@ collections:
               widget: string,
             }
           - { label: Contact Last Name, name: contactLastName, widget: string }
+          - {
+              label: Contact Email,
+              name: contactEmail,
+              widget: string,
+              required: false,
+            }
+          - {
+              label: Contact Phone,
+              name: contactPhone,
+              widget: string,
+              required: false,
+            }
           - { label: Facebook Link, name: facebookLink, widget: string }
       - label: "Home Page"
         name: "home"
@@ -33,6 +45,11 @@ collections:
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Seo Title, name: seoTitle, widget: string }
+          - {
+              label: Club Alert Text,
+              name: notificationBarText,
+              widget: string,
+            }
           - {
               label: Sub Title,
               name: subTitle,

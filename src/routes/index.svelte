@@ -1,24 +1,4 @@
 <script lang="ts" context="module">
-  interface HomePageJson {
-    title: string;
-    seoTitle: string;
-    subTitle: string;
-    images: any[];
-    cardTitle: string;
-    cards: Array<{
-      date: string;
-      ageGroup: string;
-      title: string;
-      content: string;
-      links: {
-        text: string;
-        linkTo: string;
-        opensNewTab?: boolean;
-        disabled?: boolean;
-      }[];
-    }>;
-  }
-
   export async function preload(): Promise<{ page: HomePageJson }> {
     const res = await this.fetch("_content/home.json");
     const page: HomePageJson = await res.json();
@@ -30,6 +10,7 @@
   import ProgramCard from "../components/ProgramCard.svelte";
   import Carousel from "@beyonk/svelte-carousel";
   import { ChevronLeftIcon, ChevronRightIcon } from "svelte-feather-icons";
+  import type { HomePageJson } from "../model/home-page-json.model";
 
   export let page: HomePageJson;
   let hasImages = (page?.images?.length || 0) > 0;
@@ -37,7 +18,7 @@
 
 <svelte:head>
   <title>{page.seoTitle || "MSC - Home"}</title>
-  <meta name="description" content="{'MSC - ' + page.seoTitle}"/>
+  <meta name="description" content={"MSC - " + page.seoTitle} />
 </svelte:head>
 
 <section class="mt-4 mb-12 text-center">
