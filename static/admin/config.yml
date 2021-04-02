@@ -112,6 +112,18 @@ collections:
                   required: false,
                 }
               - {
+                  label: "Signup Link",
+                  name: "signupLink",
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: "Signup Text",
+                  name: "signupText",
+                  widget: string,
+                  required: false,
+                }
+              - {
                   label: "Airtable Link",
                   name: "airtableLink",
                   widget: string,
@@ -156,9 +168,3 @@ collections:
                 }
               - { label: Bio, name: bio, widget: markdown, required: false }
               - { label: Photo, name: photo, widget: image, required: false }
-      - label: "High School Program Page"
-        name: "highschool"
-        file: "static/_content/highschool.json"
-        fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Content, name: content, widget: markdown, required: false }

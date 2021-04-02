@@ -5,8 +5,10 @@
   "programs": [
     {
       "tabName": "Spring",
-      "content": "### Spring 2021 Training\n\nThis is a great program for intermediate to advanced level skiers. Intermediate-Advanced would be skiers who need improvements in strength and technique. All sessions include technique, ski drills, and distance in the Spring.\n\n*Registration is temporarily unavailable while we work to switch to a new registration service.*\n\n<a disabled href=\"#\" class=\"signmeup-link\">\nCheck back soon for a new registration link\n</a>",
-      "airtableLink": "https://airtable.com/embed/shrtywonVVn8f0TpY?backgroundColor=cyan&layout=card&viewControls=on"
+      "content": "### Spring 2021 Training\n\nThis is a great program for intermediate to advanced level skiers. Intermediate-Advanced would be skiers who need improvements in strength and technique. All sessions include technique, ski drills, and distance in the Spring.\n\n",
+      "airtableLink": "https://airtable.com/embed/shrtywonVVn8f0TpY?backgroundColor=cyan&layout=card&viewControls=on",
+      "signupLink": "#",
+      "signupText": "Registration Temporarily Unavailable"
     },
     {
       "tabName": "Summer",

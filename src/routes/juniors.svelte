@@ -7,6 +7,8 @@
     tabName: string;
     content: string;
     airtableLink?: string;
+    signupLink?: string;
+    signupText?: string;
   }
 
   interface JuniorsPage {
@@ -36,7 +38,6 @@
 </script>
 
 <script lang="ts">
-  import { fly } from "svelte/transition";
   import NavTabs from "../components/NavTabs.svelte";
 
   export let page: JuniorsPage;
@@ -59,6 +60,7 @@
   };
 
   $: selectedHasAirtableLink = !!selectedProgramContent?.airtableLink;
+  $: selectedHasSignupLink = !!selectedProgramContent?.signupLink;
 
   let show = true;
 
@@ -71,7 +73,7 @@
 
 <svelte:head>
   <title>MSC - {page.seoTitle}</title>
-  <meta name="description" content="{'MSC - ' + page.seoTitle}"/>
+  <meta name="description" content={"MSC - " + page.seoTitle} />
 </svelte:head>
 
 <h1 class="page-title">{page.title}</h1>
@@ -83,6 +85,11 @@
 <NavTabs {...tabs} bind:selectedTab />
 
 {@html selectedProgramContent.content || ""}
+{#if selectedHasSignupLink}
+  <a href={selectedProgramContent.signupText} class="signmeup-link">
+    {selectedProgramContent.signupText || "Sign Up"}
+  </a>
+{/if}
 {#if selectedHasAirtableLink}
   <h3>{selectedProgramContent.tabName} Schedule</h3>
   <iframe
