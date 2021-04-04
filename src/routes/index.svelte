@@ -11,9 +11,29 @@
   import Carousel from "@beyonk/svelte-carousel";
   import { ChevronLeftIcon, ChevronRightIcon } from "svelte-feather-icons";
   import type { HomePageJson } from "../model/home-page-json.model";
+  import { onMount } from "svelte";
+  import { goto } from "@sapper/app";
 
   export let page: HomePageJson;
   let hasImages = (page?.images?.length || 0) > 0;
+
+  onMount(() => {
+    const hash = window.location.hash || "";
+    const hashParts = hash.split("#invite_token=");
+    if (hashParts.length === 2) {
+      goto(`/admin/${hash}`);
+    }
+
+    if ((window as any).netlifyIdentity) {
+      (window as any).netlifyIdentity.on("init", (user) => {
+        if (!user) {
+          (window as any).netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  });
 </script>
 
 <svelte:head>
