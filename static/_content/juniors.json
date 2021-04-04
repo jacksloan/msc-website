@@ -5,15 +5,17 @@
   "programs": [
     {
       "tabName": "Spring",
-      "content": "### Spring 2021 Training\n\nThis is a great program for intermediate to advanced level skiers. Intermediate-Advanced would be skiers who need improvements in strength and technique. All sessions include technique, ski drills, and distance in the Spring.\n\n",
+      "content": "### Spring 2021 Training\n\n\n\n*Registration is temporarily unavailable while we work to switch to a new registration service.*\n\n\n\nThis is a great program for intermediate to advanced level skiers. Intermediate-Advanced would be skiers who need improvements in strength and technique. All sessions include technique, ski drills, and distance in the Spring.",
       "airtableLink": "https://airtable.com/embed/shrtywonVVn8f0TpY?backgroundColor=cyan&layout=card&viewControls=on",
       "signupLink": "/contact",
-      "signupText": "Contact Kevin for registration info"
+      "signupText": "Contact Kevin For Registration Info"
     },
     {
       "tabName": "Summer",
-      "content": "### Summer 2021 Training\n\nThe 9 week summer program will begin June 14th and end on August 14th.\\\nMost sessions will include technique and distance. Wednesday sessions will focus more on intervals and speed. See table at the bottom of this page for the complete summer training schedule.\n\n*Registration is temporarily unavailable while we work to switch to a new registration service.*\n\n<a disabled href=\"#\" class=\"signmeup-link\">\nCheck back soon for a new registration link\n</a>\n\n*\\* A $50 late fee will be added to registrations made after May 1st*\n\n##### Program Cost\n\n* 1 day per week $250\n* 3 days per week $450\n* 4 days per week $525\n* Unlimited summer sessions $600\n\n*We have eliminated the 2 days per week option as we feel people improve at a much faster rate when doing 3 or more sessions.*\n\n##### Summer Strength Sessions 10 weeks\n\nTuesdays and Thursdays beginning June 8th-August 12th. This is a great way to get much stronger. Embrace North in Edina. This will be two days per week on Tuesday and Thursday Afternoons. The session will be about 50 minutes long. Cost is $250 for 9 weeks of summer strength training.",
-      "airtableLink": "https://airtable.com/embed/shr0bWXzlAy5ASCUv?backgroundColor=cyan&layout=card&viewControls=on"
+      "content": "### Summer 2021 Training\n\n\n\n*Registration is temporarily unavailable while we work to switch to a new registration service.*\n\n\n\nThe 9 week summer program will begin June 14th and end on August 14th.\\\nMost sessions will include technique and distance. Wednesday sessions will focus more on intervals and speed. See table at the bottom of this page for the complete summer training schedule.\n\n*Registration is temporarily unavailable while we work to switch to a new registration service.*\n\n*\\* A $50 late fee will be added to registrations made after May 1st*\n\n##### Program Cost\n\n* 1 day per week $250\n* 3 days per week $450\n* 4 days per week $525\n* Unlimited summer sessions $600\n\n*We have eliminated the 2 days per week option as we feel people improve at a much faster rate when doing 3 or more sessions.*\n\n##### Summer Strength Sessions 10 weeks\n\nTuesdays and Thursdays beginning June 8th-August 12th. This is a great way to get much stronger. Embrace North in Edina. This will be two days per week on Tuesday and Thursday Afternoons. The session will be about 50 minutes long. Cost is $250 for 9 weeks of summer strength training.",
+      "airtableLink": "https://airtable.com/embed/shr0bWXzlAy5ASCUv?backgroundColor=cyan&layout=card&viewControls=on",
+      "signupLink": "/contact",
+      "signupText": "Contact Kevin For Registration Questions"
     },
     {
       "tabName": "Fall",
