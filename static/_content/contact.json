@@ -1,8 +1,12 @@
 {
   "title": "Contact",
-  "contactFirstName": "Kevin",
-  "contactLastName": "Brochman",
-  "contactEmail": "kevinjbrochman at gmail dot com",
-  "contactPhone": "651.231.0779",
-  "facebookLink": "https://www.facebook.com/Minneapolis-Ski-Club-1469038073374160/about"
+  "facebookLink": "https://www.facebook.com/Minneapolis-Ski-Club-1469038073374160/about",
+  "contacts": [
+    {
+      "contactFirstName": "Kevin",
+      "contactLastName": "Brochman",
+      "contactEmail": "kevinjbrochman at gmail dot com",
+      "contactPhone": "651.231.0779"
+    }
+  ]
 }

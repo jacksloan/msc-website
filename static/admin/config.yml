@@ -20,25 +20,33 @@ collections:
         file: "static/_content/contact.json"
         fields:
           - { label: Title, name: title, widget: string }
-          - {
-              label: Contact First Name,
-              name: contactFirstName,
-              widget: string,
-            }
-          - { label: Contact Last Name, name: contactLastName, widget: string }
-          - {
-              label: Contact Email,
-              name: contactEmail,
-              widget: string,
-              required: false,
-            }
-          - {
-              label: Contact Phone,
-              name: contactPhone,
-              widget: string,
-              required: false,
-            }
           - { label: Facebook Link, name: facebookLink, widget: string }
+          - label: "Contacts"
+            name: "contacts"
+            widget: "list"
+            fields:
+              - {
+                  label: Contact First Name,
+                  name: contactFirstName,
+                  widget: string,
+                }
+              - {
+                  label: Contact Last Name,
+                  name: contactLastName,
+                  widget: string,
+                }
+              - {
+                  label: Contact Email,
+                  name: contactEmail,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: Contact Phone,
+                  name: contactPhone,
+                  widget: string,
+                  required: false,
+                }
       - label: "Home Page"
         name: "home"
         file: "static/_content/home.json"
