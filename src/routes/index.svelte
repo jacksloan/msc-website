@@ -14,6 +14,16 @@
 
   export let page: HomePageJson;
   let hasImages = (page?.images?.length || 0) > 0;
+
+  if ((window as any).netlifyIdentity) {
+    (window as any).netlifyIdentity.on("init", (user) => {
+      if (!user) {
+        (window as any).netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
 </script>
 
 <svelte:head>
