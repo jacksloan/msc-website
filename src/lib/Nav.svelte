@@ -74,7 +74,7 @@
 	{/if}
 </div>
 
-<style>
+<style lang="scss">
 	[aria-current] {
 		position: relative;
 		display: inline-block;
