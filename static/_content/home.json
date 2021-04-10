@@ -2,7 +2,10 @@
   "title": "Minneapolis Ski Club",
   "seoTitle": "MSC - Home",
   "subTitle": "",
-  "notificationBarText": "Online registration is temporarily unavailable while we switch registration services",
+  "callToAction": "Online registration for Spring and Summer is back up",
+  "callToActionLink": "https://runsignup.com/Race/Events/MN/Afton/MinneapolisSkiClubEvents",
+  "callToActionLinkText": "Register Now",
+  "notificationBarText": "",
   "cardTitle": "2021-2022 Programming",
   "cards": [
     {

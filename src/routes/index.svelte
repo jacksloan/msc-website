@@ -47,6 +47,23 @@
     {page.subTitle}
   </p>
 
+  {#if page.callToAction}
+    <p class="text-lg font-medium">
+      {page.callToAction}
+    </p>
+  {/if}
+
+  {#if !!page.callToActionLink && !!page.callToActionLinkText}
+    <div class="w-full mt-4 flex flex-row justify-center">
+      <a
+        class="text-md font-medium text-white bg-indigo-500 px-8 py-3 block rounded-md"
+        href={page.callToActionLink}
+        target="_blank"
+        >{page.callToActionLinkText}
+      </a>
+    </div>
+  {/if}
+
   {#if hasImages}
     <div class="pt-8">
       <Carousel perPage={1}>

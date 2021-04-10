@@ -17,7 +17,7 @@
 
   export let segment: string;
 
-  let showNotification = true;
+  let showNotification = !!page.notificationBarText;
 
   let show = true;
 

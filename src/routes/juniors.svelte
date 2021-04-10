@@ -86,7 +86,11 @@
 
 {@html selectedProgramContent.content || ""}
 {#if selectedHasSignupLink}
-  <a href={selectedProgramContent.signupLink} class="signmeup-link">
+  <a
+    href={selectedProgramContent.signupLink}
+    target="_blank"
+    class="signmeup-link"
+  >
     {selectedProgramContent.signupText || "Sign Up"}
   </a>
 {/if}
