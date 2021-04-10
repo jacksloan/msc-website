@@ -9,23 +9,13 @@
 <script lang="ts">
 	import '../app.scss';
 	import Nav from '$lib/Nav.svelte';
-	import { fade, slide } from 'svelte/transition';
+	import { slide } from 'svelte/transition';
 	import type { HomePageJson } from '../model/home-page-json.model';
 	import CloseIcon from 'svelte-feather-icons/src/icons/XIcon.svelte';
 
 	export let page: HomePageJson;
 
-	export let segment: string;
-
 	let showNotification = !!page.notificationBarText;
-
-	let show = true;
-
-	const change = (segment: string) => {
-		show = !show;
-	};
-
-	$: change(segment);
 </script>
 
 {#if showNotification}
@@ -42,22 +32,8 @@
 	</section>
 {/if}
 
-<Nav {segment} />
+<Nav />
 
-{#if show}
-	<main
-		in:fade={{ delay: 205, duration: 200 }}
-		out:fade={{ duration: 200 }}
-		class="relative max-w-4xl p-8 m-auto box-border"
-	>
-		<slot />
-	</main>
-{:else}
-	<main
-		in:fade={{ delay: 205, duration: 200 }}
-		out:fade={{ duration: 200 }}
-		class="relative max-w-4xl p-8 m-auto box-border"
-	>
-		<slot />
-	</main>
-{/if}
+<main class="relative max-w-4xl p-8 m-auto box-border">
+	<slot />
+</main>
