@@ -3,15 +3,21 @@
 	import MscLogo from './MscLogo.svelte';
 	import MenuIcon from 'svelte-feather-icons/src/icons/MenuIcon.svelte';
 	import { slide } from 'svelte/transition';
+	import { page } from '$app/stores';
 
-	export let segment: string;
+	$: segment = $page.path;
+
+	$: {
+		console.log(segment);
+	}
+
 	const pages: [string, string][] = [
-		[undefined, 'HOME'],
-		['juniors', 'JUNIORS'],
-		['adults', 'ADULTS'],
-		['coaches', 'COACHES'],
-		['about', 'ABOUT'],
-		['contact', 'CONTACT']
+		['/', 'HOME'],
+		['/juniors', 'JUNIORS'],
+		['/adults', 'ADULTS'],
+		['/coaches', 'COACHES'],
+		['/about', 'ABOUT'],
+		['/contact', 'CONTACT']
 	];
 
 	function goHome() {
@@ -42,7 +48,7 @@
 				<li class="hidden md:inline">
 					<a
 						class="no-underline px-4 py-4 block font-medium text-lg"
-						rel={segment === 'blog' ? 'prefetch' : undefined}
+						rel={segment === '/blog' ? 'prefetch' : undefined}
 						aria-current={segment === link ? 'page' : undefined}
 						href={link || '.'}>{display}</a
 					>
@@ -63,7 +69,7 @@
 					<li on:click={toggleSideNav}>
 						<a
 							class="no-underline px-4 py-6 block font-medium text-lg"
-							rel={segment === 'blog' ? 'prefetch' : undefined}
+							rel={segment === '/blog' ? 'prefetch' : undefined}
 							aria-current={segment === link ? 'page' : undefined}
 							href={link || '.'}>{display}</a
 						>
