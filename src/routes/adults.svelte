@@ -1,19 +1,6 @@
 <script context="module" lang="ts">
 	import marked from 'marked';
 
-	interface ProgramContent {
-		tabName: string;
-		content: string;
-		airtableLink?: string;
-	}
-
-	interface AdultsPage {
-		title: string;
-		seoTitle: string;
-		content: string;
-		programs: ProgramContent[];
-	}
-
 	export async function load({ fetch }): Promise<{ props: { page: AdultsPage } }> {
 		const res = await fetch('_content/adults.json');
 		const json: AdultsPage = await res.json();
@@ -34,6 +21,7 @@
 
 <script lang="ts">
 	import NavTabs from '$lib/NavTabs.svelte';
+	import type { AdultsPage, AdultsProgramContent } from '$model';
 
 	export let page: AdultsPage;
 
@@ -44,7 +32,7 @@
 
 	let selectedTab: string = '';
 
-	let selectedProgramContent: ProgramContent;
+	let selectedProgramContent: AdultsProgramContent;
 
 	$: selectedProgramContent = page.programs.find((it) => it.tabName === selectedTab) || {
 		tabName: '',

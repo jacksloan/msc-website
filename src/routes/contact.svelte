@@ -1,17 +1,4 @@
 <script context="module" lang="ts">
-	interface ContactPage {
-		title: string;
-		facebookLink: string;
-		contacts: Contact[];
-	}
-
-	interface Contact {
-		contactFirstName: string;
-		contactLastName: string;
-		contactEmail?: string;
-		contactPhone?: string;
-	}
-
 	export async function load({ fetch }): Promise<{ props: { page: ContactPage } }> {
 		const res = await fetch('_content/contact.json');
 		const page: ContactPage = await res.json();
@@ -20,10 +7,12 @@
 </script>
 
 <script lang="ts">
-	export let page: ContactPage;
+	import type { ContactPage } from '$model';
 	import FacebookIcon from 'svelte-feather-icons/src/icons/FacebookIcon.svelte';
 	import EmailIcon from 'svelte-feather-icons/src/icons/MailIcon.svelte';
 	import PhoneIcon from 'svelte-feather-icons/src/icons/PhoneIcon.svelte';
+
+	export let page: ContactPage;
 
 	let emailsAndPhone = (page.contacts || []).reduce((acc, curr, index) => {
 		return {

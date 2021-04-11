@@ -10,7 +10,7 @@
 	import ProgramCard from '$lib/ProgramCard.svelte';
 	// import Carousel from '@beyonk/svelte-carousel';
 	// import { ChevronLeftIcon, ChevronRightIcon } from 'svelte-feather-icons';
-	import type { HomePageJson } from '../model/home-page-json.model';
+	import type { HomePageJson } from '../model';
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
 

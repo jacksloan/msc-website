@@ -1,9 +1,5 @@
 <script context="module" lang="ts">
 	import marked from 'marked';
-	interface AboutPage {
-		title: string;
-		content: string;
-	}
 
 	export async function load({ fetch }): Promise<{ props: { page: AboutPage } }> {
 		const res = await fetch('_content/about.json');
@@ -21,6 +17,8 @@
 </script>
 
 <script lang="ts">
+	import type { AboutPage } from '$model';
+
 	export let page: AboutPage;
 </script>
 

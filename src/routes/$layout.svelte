@@ -10,7 +10,7 @@
 	import '../app.scss';
 	import Nav from '$lib/Nav.svelte';
 	import { slide } from 'svelte/transition';
-	import type { HomePageJson } from '../model/home-page-json.model';
+	import type { HomePageJson } from '$model';
 	import CloseIcon from 'svelte-feather-icons/src/icons/XIcon.svelte';
 
 	export let page: HomePageJson;

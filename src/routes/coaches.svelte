@@ -1,20 +1,6 @@
 <script context="module" lang="ts">
 	import marked from 'marked';
 
-	interface CoachBio {
-		name: string;
-		position?: string;
-		photo?: string;
-		bio?: string;
-	}
-
-	interface CoachesPage {
-		title: string;
-		intro?: string;
-		fallBackImage: string;
-		coaches: CoachBio[];
-	}
-
 	export async function load({ fetch }): Promise<{ props: { page: CoachesPage } }> {
 		const res = await fetch('_content/coaches.json');
 		const json: CoachesPage = await res.json();
@@ -37,6 +23,7 @@
 
 <script lang="ts">
 	import Modal from '$lib/Modal.svelte';
+	import type { CoachesPage, CoachBio } from '$model';
 	export let page: CoachesPage;
 	let showModal: boolean = false;
 	let currentCoach: CoachBio;
