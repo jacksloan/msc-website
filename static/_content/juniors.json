@@ -34,7 +34,8 @@
     },
     {
       "tabName": "Camps",
-      "airtableLink": "https://airtable.com/embed/shrQ8nAqOFzkJpzfA?backgroundColor=cyan&viewControls=on"
+      "content": "### Juniors Camps",
+      "airtableLink": "https://airtable.com/embed/shrQ8nAqOFzkJpzfA?backgroundColor=cyan&viewControls=on&layout=card"
     }
   ]
 }
