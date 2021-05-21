@@ -1,12 +1,4 @@
 {
-  "title": "Minneapolis Ski Club",
-  "seoTitle": "MSC - Home",
-  "subTitle": "",
-  "callToAction": "Online registration for Spring and Summer is back up",
-  "callToActionLink": "https://runsignup.com/Race/Events/MN/Afton/MinneapolisSkiClubEvents",
-  "callToActionLinkText": "Register Now",
-  "notificationBarText": "",
-  "cardTitle": "2021-2022 Programming",
   "cards": [
     {
       "title": "Spring 2021",
@@ -53,9 +45,15 @@
       "content": "The fall/winter schedule is still being developed. Dates, times, and locations may change."
     }
   ],
+  "cardTitle": "2021-2022 Programming",
+  "callToActionLink": "https://runsignup.com/Race/Events/MN/Afton/MinneapolisSkiClubEvents",
+  "callToAction": "Online registration for Spring and Summer is back up",
+  "notificationBarText": "Roll with MSC",
+  "callToActionLinkText": "Register Now",
+  "title": "Minneapolis Ski Club",
   "images": [
     {
-      "image": "/images/rollerski-2-min.jpg"
+      "image": "/images/rollerski-3.png"
     },
     {
       "image": "/images/rollerski-3-min.png"
@@ -63,5 +61,7 @@
     {
       "image": "/images/rollerski-1-min.jpg"
     }
-  ]
+  ],
+  "subTitle": "",
+  "seoTitle": "MSC - Home"
 }
