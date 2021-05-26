@@ -64,9 +64,24 @@ collections:
               widget: string,
               required: false,
             }
-          - { label: callToAction, name: Call To Action, widget: string, required: false }
-          - { label: callToActionLink, name: Call To Action Link, widget: string, required: false }
-          - { label: callToActionLinkText, name: Call To Actin Link Text, widget: string, required: false }
+          - {
+              label: Call To Action,
+              name: callToAction,
+              widget: string,
+              required: false,
+            }
+          - {
+              label: Call To Action Link,
+              name: callToActionLink,
+              widget: string,
+              required: false,
+            }
+          - {
+              label: Call To Actin Link Text,
+              name: callToActionLinkText,
+              widget: string,
+              required: false,
+            }
           - { label: Programming Title, name: cardTitle, widget: string }
           - label: "Image Slider"
             name: "images"
